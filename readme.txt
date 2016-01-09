@@ -1,28 +1,25 @@
 === f(x) Categories Widget ===
 Contributors: turtlepod
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TT23LVNKA3AU2
-Tags: comments, spam
+Tags: widget, categories, tag, post tag, taxonomy, custom taxonomy
 Requires at least: 4.0
 Tested up to: 4.4
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Send notification via email when a user successfully logged-in in your site.
+Categories widget with taxonomy option.
 
 == Description ==
 
-f(x) Login Notification plugin is a security utility plugin to let you know who log to your site with other useful information such as user information and IP address via configurable email message.
-
-After you install and activate this plugin, you can configure via Login Notification settings page in "Settings > Login Notification".
+**[f(x) Categories Widget](http://genbu.me/plugins/fx-categories-widget/)** will register a custom widget "Categories +" it's just like WordPress default Categories Widget, but with taxonomy option just like in Tag Cloud widget.
 
 **Features:**
 
-1. Be the first to know when someone login to your site (or hack your site).
-1. Enable/disable admin notification.
-1. Exclude user roles for admin notification.
-1. Configurable email template.
-1. Extendable and fully documented (read the Dev Notes).
+1. Simple and easy to use.
+1. Works flawlessly for multiple widget instances.
+1. Select all build in taxonomy (such as category and tag) and all custom taxonomy.
+1. Now you can display your Post Tags as list or drop down (not only as tag cloud).
 1. The GPL v2.0 or later license. :) Use it to make something cool.
 1. Support available at [Genbu Media](https://genbu.me/contact-us/).
 
@@ -33,85 +30,37 @@ After you install and activate this plugin, you can configure via Login Notifica
 2. To install directly from WordPress.org repository, search the plugin name in the search box and click "Install Now" button to install the plugin.
 3. To install from plugin .zip file, click "Upload Plugin" button in "Plugins > Add New" Screen. Browse the plugin .zip file, and click "Install Now" button.
 4. Activate the plugin.
-5. Navigate to "Settings > Login Notification" page in your admin panel to configure the plugins.
+5. Re-configure your widgets from "Appearance > Widgets" or "Appearance > Customize".
 
 == Frequently Asked Questions ==
 
-= Where is the settings ? =
+= How to change my categories widget ? =
 
-The settings is in "Settings > Login Notification".
+Go to "Appearance > Widgets" or "Appearance > Customize" remove your default "Categories" widget with "Categories +".
+
+= Can I select tag in taxonomy ? =
+
+Yes, you can list category, post tag, or any custom taxonomy and display it as list or drop down just like categories.
 
 == Screenshots ==
 
-1. Settings screenshot
+1. Widget Options
 
 == Changelog ==
 
-= 1.0.0 - 7 Jan 2015 =
-* Add readme. Prepare for WordPress.org
-* Remove autohosted.com updater.
-* Fix typo in settings.
-* Update language files.
-* Add `fx_login_nf_from_email` and `fx_login_nf_from_name` filter.
+= 1.0.0 - 9 Jan 2015 =
+* Initial relase
 
-= 0.1.0 =
-* First relase.
 
 == Upgrade Notice ==
 
 = 1.0.0 =
-Maintenance relase.
+Initial relase
 
-== Dev Notes ==
+== Other Notes ==
 
 Notes for developer: 
 
 = Github =
 
-Development of this plugin is hosted at [GitHub](https://github.com/turtlepod/fx-login-notification). Pull request and bug reports are welcome.
-
-= Options =
-
-This plugin save the options in single option name: `fx-login-nf-admin`.
-
-= Hooks =
-
-List of hooks available in this plugin:
-
-**filter:** `fx_login_nf_user_roles` (array)
-
-List of user roles in the checkbox option.
-
-**filter:** `fx_login_nf_email_subject_template_default` (string)
-
-The default email subject template. This string is translateable. To translate it in your language, translate the plugin and do not use this filter.
-
-**filter:** `fx_login_nf_email_content_template_default` (string)
-
-The default email content template. This string is translateable. To translate it in your language, translate the plugin and do not use this filter.
-
-**filter:** `fx_login_nf_email_template_note` (string)
-
-The template tags note in the settings page. Use this if you want to remove and add your own template tags in the email. This string is translateable. To translate it in your language, translate the plugin and do not use this filter.
-
-**filter:** `fx_login_nf_parse_template` (string)
-
-If you create your own tag, you can pass it in this filter.
-
-**filter:** `fx_login_nf_from_email` (string)
-
-"From Email Address" used to send the notification. As default it will use "noreply@{your site domain}".
-
-**filter:** `fx_login_nf_from_name` (string)
-
-"From Email Address Name" used to send the notification. As default it will use "{your site name} Notification". This string is translateable.
-
-**action:** `fx_login_nf_before_send_mail`
-
-Hook before email notification is sent.
-
-**action:** `fx_login_nf_after_send_mail`
-
-Hook after email notification is sent.
-
-
+Development of this plugin is hosted at [GitHub](https://github.com/turtlepod/fx-categories-widget). Pull request and bug reports are welcome.

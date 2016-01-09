@@ -5,20 +5,15 @@
 **/
 
 /* Register Widgets */
-add_action( 'widgets_init', 'fx_categories_widget_register_widgets' );
+add_action( 'widgets_init', 'fx_cat_widget_register_widgets' );
 
 /**
  * Register Widget
  * @uses     register_widget()
  * @since    0.1.0
  */
-function fx_categories_widget_register_widgets() {
-
-	/* Unregister Categories Widget */
-	//unregister_widget( 'WP_Widget_Categories' );
-
-	/* Register f(x) Categories Widget */
-	register_widget( 'fx_Categories_Widget' );
+function fx_cat_widget_register_widgets() {
+	register_widget( 'fx_Cat_Widget' );
 }
 
 
@@ -28,11 +23,11 @@ function fx_categories_widget_register_widgets() {
  * @see wp-includes/widgets/class-wp-widget-tag-cloud.php
  * @since 0.1.0
  */
-class fx_Categories_Widget extends WP_Widget {
+class fx_Cat_Widget extends WP_Widget {
 
 	public function __construct() {
-		$widget_ops = array( 'classname' => 'widget_fx_categories', 'description' => __( "A list or dropdown of categories.", 'fx-categories-widget' ) );
-		parent::__construct( 'widget_fx_categories',__('Categories','fx-categories-widget'), $widget_ops);
+		$widget_ops = array( 'classname' => 'widget_categories', 'description' => __( "A list or dropdown of categories, tags, or taxonomy terms.", 'fx-categories-widget' ) );
+		parent::__construct( 'widget_fx_categories', __( 'Categories +','fx-categories-widget' ), $widget_ops);
 	}
 
 	/**
@@ -86,7 +81,7 @@ class fx_Categories_Widget extends WP_Widget {
 				wp_dropdown_categories( apply_filters( 'widget_categories_dropdown_args', $tax_args ) );
 			}
 			else{
-				fx_categories_widget_dropdown_categories( apply_filters( 'fx_categories_widget_dropdown_args', $tax_args ) );
+				fx_cat_widget_dropdown_categories( apply_filters( 'fx_cat_widget_dropdown_args', $tax_args ) );
 			}
 
 			/* Current taxonomy to build URL Query. */

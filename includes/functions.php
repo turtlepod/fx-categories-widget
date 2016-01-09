@@ -10,7 +10,7 @@
  * @see wp-includes/category-template.php
  * @since 0.1.0
  */
-function fx_categories_widget_dropdown_categories( $args = '' ) {
+function fx_cat_widget_dropdown_categories( $args = '' ) {
 	$defaults = array(
 		'show_option_all' => '', 'show_option_none' => '',
 		'orderby' => 'id', 'order' => 'ASC',
