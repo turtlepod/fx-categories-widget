@@ -72,7 +72,7 @@ class fx_Cat_Widget extends WP_Widget {
 				'id'                => $wid . '_dd',
 				'taxonomy'          => $taxonomy,
 				'orderby'           => 'name',
-				'show_option_none'  => esc_attr( sprintf( __( 'Select %s', 'fx-categories-dropdown' ), $name ) ),
+				'show_option_none'  => esc_attr( sprintf( __( 'Select %s', 'fx-categories-widget' ), $name ) ),
 				'show_count'        => ! empty( $instance['count'] ) ? '1' : '0',
 				'hierarchical'      => ! empty( $instance['hierarchical'] ) ? '1' : '0',
 				//'echo'              => 0,

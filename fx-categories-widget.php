@@ -3,7 +3,7 @@
  * Plugin Name: f(x) Categories Widget
  * Plugin URI: http://fx-plugins.com/plugins/fx-categories-widget/
  * Description: Categories widget with taxonomy option.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: David Chandra Purnama
  * Author URI: http://shellcreeper.com/
  *
@@ -27,7 +27,7 @@ if ( ! defined( 'WPINC' ) ) { die; }
 ------------------------------------------ */
 
 /* Set the version constant. */
-define( 'FX_CAT_WIDGET_VERSION', '1.0.0' );
+define( 'FX_CAT_WIDGET_VERSION', '1.0.1' );
 
 /* Set the constant path to the plugin path. */
 define( 'FX_CAT_WIDGET_PATH', trailingslashit( plugin_dir_path( __FILE__ ) ) );
